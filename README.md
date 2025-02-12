@@ -10,11 +10,13 @@ Ambas aplicaciones están dockerizadas y se orquestan mediante Docker Compose.
 ## Instalación y Configuración
 
 ### Prerrequisitos
+
 - Docker y Docker Compose instalados en el sistema.
 
 ### Pasos para la instalación
 
 1. **Clonar el repositorio**
+
    ```bash
    git clone https://github.com/nicodev-co/tasks.git
    cd tasks
@@ -22,11 +24,13 @@ Ambas aplicaciones están dockerizadas y se orquestan mediante Docker Compose.
 
 2. **Configurar las variables de entorno**
    Copiar los archivos de ejemplo y modificarlos según sea necesario:
+
    ```bash
    cp backend/.env.example backend/.env
    ```
 
    **Configurar la base de datos en `backend/.env`**:
+
    ```ini
    DB_CONNECTION=pgsql
    DB_HOST=postgres
@@ -35,13 +39,17 @@ Ambas aplicaciones están dockerizadas y se orquestan mediante Docker Compose.
    DB_USERNAME=laravel
    DB_PASSWORD=secret
    ```
+   **Configurar la URL del frontend en backend/.env:**
+
+   ```ini
+   FRONTEND_URL=http://localhost:5173
+   ```
 
 3. **Levantar los contenedores con Docker Compose**
    ```bash
    docker compose up -d --build
-   ```
+````
 
 4. **Acceder a la aplicación**
    - API Laravel: [http://localhost:8000](http://localhost:8000)
    - Frontend React: [http://localhost:5173](http://localhost:5173)
-
