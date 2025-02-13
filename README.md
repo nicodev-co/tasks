@@ -48,7 +48,7 @@ Ambas aplicaciones están dockerizadas y se orquestan mediante Docker Compose.
 3. **Levantar los contenedores con Docker Compose**
    ```bash
    docker compose up -d --build
-````
+   ````
 
 4. **Acceder a la aplicación**
    - API Laravel: [http://localhost:8000](http://localhost:8000)

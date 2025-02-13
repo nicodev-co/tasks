@@ -12,9 +12,7 @@ const AuthService = {
   },
 
   async register({ name, email, password }) {
-    await AuthService.getCsrfCookie().then((response) => {
-        console.log(response);
-    });
+    await AuthService.getCsrfCookie();
     const response = await apiClient.post('/register', { name, email, password });
     return response.data;
   },
